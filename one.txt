@@ -1,0 +1,81 @@
+document.getElementById('title'); -- targeting element through id 
+
+document.getElementById('title').getAttribute('id'); -- to get attribute id
+
+document.getElementById('title').getAttribute('class'); -- to get attribute id
+
+document.getElementById('title').setAttribute('class', 'test'); -- to set attribute, this is always overwrite previous attribute -- Important
+
+const title = document.getElementById('title'); -- storing this into the variable 
+
+title.style.backgroundColor = 'yellow'; -- after storing into title variable we can change the backgroundColor into yellow
+
+title.style.padding = '15px'; -- set the paadding
+
+
+-- Important --
+
+title.textContent
+'DOM learning on Chai or Code'
+title.innerHTML
+'DOM learning on Chai or Code'
+title.innerText
+'DOM learning on Chai or Code'
+
+
+after adding this <span style="display: none;">I am a Span</span> -- focus on display none 
+
+title.textContent -- this will give all the content 
+'DOM learning on Chai or Code I am a Span'
+
+title.innerText
+'DOM learning on Chai or Code' 
+
+title.innerHTML -- this will give all the content and, if you write any HTML content inside this it will give this content
+'DOM learning on Chai or Code <span style="display: none;">I am a Span</span>'
+
+
+
+document.querySelector('h2'); -- give 1st h2 inside the page
+
+querySelector -- through CSS selector 
+
+document.querySelector('#title'); -- through ID 
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('.heading'); -- through Class 
+<h1 id=​"title" class=​"heading">​…​</h1>​
+document.querySelector('input[type="password"]'); -- through password field
+<input type=​"password" name id>​
+
+
+document.querySelector('ul'); -- selecting all ul and li 
+<ul>​<li>​…​</li>​<li>​…​</li>​<li>​…​</li>​</ul>​
+const myUl = document.querySelector('ul'); -- storing into variable 
+
+
+myUl.querySelector('li'); -- selecting 1st li 
+
+const turnGreen = myUl.querySelector('li'); -- storing into variable
+
+turnGreen.style.backgroundColor = "green"; -- then change into green
+
+
+agar aapko nodelist milta hai toh aapko batana padega which element you have to perform 
+document.querySelectorAll('li') --  for selecting all li 
+
+const tempLiList = document.querySelectorAll('li') -- storing into a variable
+
+tempLiList[0].style.backgroundColor = "green" -- now give [0] which li you have to green 
+
+turn all the element into green 
+tempLiList.forEach((num) => {
+    num.style.backgroundColor = 'green'
+}) 
+
+
+yaha HTML collection milega 
+document.getElementsByClassName('list-item')
+
+const tempClassList = document.getElementsByClassName('list-item') -- storing into variable
+
+Array.from(tempClassList) -- converting HTML collection into Array -- now you can perfome Array operation in this just like forEach
